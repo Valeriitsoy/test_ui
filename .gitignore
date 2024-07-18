@@ -1,2 +1,4 @@
 venv
 .idea
+./debug_screenshot.png
+allure-results
