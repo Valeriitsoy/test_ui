@@ -14,7 +14,7 @@ class TestProductPage:
         product_page.open()
         product_page.click_on_product_card('Tomato')
         locator = page.locator('//div[@class="quick-view-image"]/child::img')
-        # page.screenshot(path="debug_screenshot.png")   --> можно сделать скриншот ошибки открытия страницы продукта
+        product_page.report_screenshot('shop.png')
         expect(locator, "Product page opening error").to_be_visible()
 
     @allure.feature("Search product")

@@ -1,5 +1,6 @@
 from pages.base_page import BasePage
 import allure
+from config.links import Links
 
 
 class ProductPage(BasePage):
@@ -9,7 +10,7 @@ class ProductPage(BasePage):
 
     @allure.step("Opening a Greencart store page")
     def open(self) -> None:
-        self.page.goto("https://rahulshettyacademy.com/seleniumPractise/#/")
+        self.page.goto(Links.HOST)
 
     @allure.step("Open product page")
     def click_on_product_card(self, product_name: str) -> None:
